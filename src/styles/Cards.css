@@ -162,6 +162,7 @@ button:hover {
   backdrop-filter: blur(7.9px);
   -webkit-backdrop-filter: blur(7.9px);
   width: 230px;
+  border-radius: 5px;
   height: 60px;
   color: rgb(251, 249, 249);
   z-index: 3;
