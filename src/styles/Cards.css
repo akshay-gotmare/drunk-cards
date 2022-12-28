@@ -1,0 +1,270 @@
+@font-face {
+  font-family: crFont;
+  src: url(../You\ Blockhead.ttf);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 20px 0px;
+}
+/* BEGIN CARD DESIGN */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: crFont;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  width: 380px;
+  min-width: 380px;
+  height: 600px;
+  min-height: 600px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+  background: linear-gradient(
+    140deg,
+    #2c2c2c8e 20%,
+    #4e4f4a61 40%,
+    rgba(69, 80, 80, 0.781) 70%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.285);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  user-select: none;
+  border: solid rgb(247, 245, 245) 1px;
+}
+
+.card-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+}
+
+/* .card-description-bk {
+  z-index: 2;
+  background-image: linear-gradient(-0deg, #bb7413, #e7d25c);
+  border-radius: 40%;
+  position: absolute;
+  top: 60%;
+  left: -20px;
+  height: 50%;
+  width: 105%;
+  transform: skew(-40deg, 30deg);
+} */
+
+.card-content {
+  position: absolute;
+  text-align: center;
+  width: 95%;
+  height: 300px;
+  color: white;
+  text-transform: capitalize;
+  text-shadow: 0px 1px 8px rgb(0, 0, 0);
+  z-index: 3;
+  bottom: 75px;
+  left: 10px;
+  font-size: 0.8em;
+  overflow-wrap: break-word;
+  padding: 20px 20px 10px 20px;
+  border-radius: 1em;
+
+  /* letter-spacing: 1px; */
+  word-spacing: 1.5px;
+  line-height: 35px;
+}
+
+.card-logo {
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+
+  position: absolute;
+  z-index: 4;
+  top: 5%;
+  left: 23%;
+  overflow: hidden;
+  color: white;
+
+  padding-top: 10px;
+  text-shadow: 0px 5px 10px black;
+  /* box-shadow: 0px 0px 20px rgba(59, 49, 49, 0.337); */
+  mix-blend-mode: multiply;
+}
+
+.card-task {
+  position: absolute;
+  align-content: center;
+  color: black;
+  font-weight: 900;
+  /* mix-blend-mode: difference; */
+}
+
+button {
+  position: absolute;
+  left: 28%;
+  bottom: 10%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px rgba(255, 0, 0, 0.413);
+  /* background: linear-gradient(130deg, #9349f3 40%, rgb(9, 134, 141) 70%); */
+  background: none;
+  color: white;
+  font-size: 0.9em;
+  transition: background-color 0.7s ease, color 0.5s ease, padding 0.5s ease,
+    left 0.7s ease, bottom 0.7s ease, box-shadow 0.7s ease;
+  z-index: 3;
+  border: solid rgb(247, 245, 245) 1px;
+  background: linear-gradient(
+    140deg,
+    #2c2c2c8e 20%,
+    #4e4f4a61 40%,
+    rgba(69, 80, 80, 0.781) 70%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.285);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  cursor: pointer;
+}
+button:hover {
+  padding: 12px 22px;
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.208);
+  text-shadow: 0px 3px 5px rgb(13, 0, 0);
+}
+
+.card-rarity {
+  position: absolute;
+  overflow: hidden;
+  /* background-color: white; */
+  background: linear-gradient(
+    140deg,
+    #2c2c2c8e 20%,
+    #4e4f4a61 40%,
+    rgba(69, 80, 80, 0.781) 70%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.285);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  width: 220px;
+  height: 60px;
+  color: rgb(251, 249, 249);
+  z-index: 3;
+  top: 110px;
+  right: 80px;
+  padding: 18px;
+  vertical-align: middle;
+  letter-spacing: 1.4px;
+  text-shadow: 0px 1px 8px rgb(0, 0, 0);
+  font-size: 0.8em;
+}
+
+.basic {
+  background: linear-gradient(
+    130deg,
+    #9349f3ad 20%,
+    #c6f75361 40%,
+    rgba(9, 134, 141, 0.781) 70%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.285);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+}
+
+.Common {
+  background: linear-gradient(
+    140deg,
+    #2c2c2c8e 20%,
+    #4e4f4a61 40%,
+    rgba(69, 80, 80, 0.781) 70%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.285);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+}
+
+.Rare {
+  background: linear-gradient(
+    130deg,
+    #f3af49ad 30%,
+    #8f632061 60%,
+    rgba(101, 105, 23, 0.781) 70%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.285);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+}
+.Epic {
+  background: linear-gradient(
+    130deg,
+    #9349f3ad 20%,
+    #c6f75361 40%,
+    rgba(9, 134, 141, 0.781) 70%
+      /* 130deg,
+    #6a7efaad 10%,
+    #89bc11d2 30%,
+    rgba(117, 154, 255, 0.97) 70% */
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.285);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+}
+
+.Legendary {
+  background: linear-gradient(
+    121deg,
+    #0077ff9d,
+    #ffd5009e,
+    #0059ffdb,
+    #00897ba5,
+    #5f9af2ac,
+    #ff0000ee,
+    #0059ff9f,
+    #00ff3c98,
+    #0059ffa1
+  );
+  background-size: 600% 600%;
+
+  -o-animation: gradient1 10s ease infinite;
+  animation: gradient1 15s ease infinite;
+}
+
+@-o-keyframes gradient1 {
+  0% {
+    background-position: 0% 17%;
+  }
+  50% {
+    background-position: 50% 84%;
+  }
+  100% {
+    background-position: 90% 17%;
+  }
+}
+@keyframes gradient1 {
+  0% {
+    background-position: 0% 17%;
+  }
+  50% {
+    background-position: 100% 84%;
+  }
+  100% {
+    background-position: 0% 17%;
+  }
+}
+
+/* END CARD DESIGN */
