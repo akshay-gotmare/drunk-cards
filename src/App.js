@@ -3,18 +3,6 @@ import "./App.css";
 import Cards from "./components/Cards";
 // import UploadData from "./components/UploadData";
 
-function handleExpansion(e) {
-  console.log("inside");
-
-  let elementToExpand = document.querySelector("#expand");
-
-  if (!document.fullscreenElement) {
-    elementToExpand.requestFullscreen();
-  } else {
-    document.exitFullscreen();
-  }
-}
-
 const App = () => {
   const [TaskList, setTaskList] = useState([]);
   const [data, setData] = useState({
@@ -56,14 +44,11 @@ const App = () => {
       <header className="main-header">
         <h2>Play 303</h2>
       </header>
-      <div id="expand" onClick={handleExpansion}>
-        <Cards
-          data={data}
-          getRandomTaskData={getRandomTaskData}
-          TaskList={TaskList}
-        />
-      </div>
-
+      <Cards
+        data={data}
+        getRandomTaskData={getRandomTaskData}
+        TaskList={TaskList}
+      />
       <footer>
         <h3>Follow handles</h3>
       </footer>
