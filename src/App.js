@@ -4,6 +4,7 @@ import Cards from "./components/Cards";
 // import UploadData from "./components/UploadData";
 
 const App = () => {
+  const [TaskList, setTaskList] = useState([]);
   const [data, setData] = useState({
     attributes: {
       type: "",
@@ -18,8 +19,6 @@ const App = () => {
     Id: "dacsdcds",
   });
 
-  const [TaskList, setTaskList] = useState([]);
-
   useEffect(() => {
     fetch("https://drunk-cards-backend.onrender.com/")
       .then((res) => {
@@ -30,7 +29,7 @@ const App = () => {
         console.log(data);
       });
   }, []);
-  
+
   const taskLength = TaskList.length;
   console.log(taskLength);
 
@@ -45,7 +44,11 @@ const App = () => {
       <header className="main-header">
         <h2>Play 303</h2>
       </header>
-      <Cards data={data} getRandomTaskData={getRandomTaskData} />
+      <Cards
+        data={data}
+        getRandomTaskData={getRandomTaskData}
+        TaskList={TaskList}
+      />
       <footer>
         <h3>Follow handles</h3>
       </footer>

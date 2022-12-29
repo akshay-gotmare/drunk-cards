@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Cards.css";
 
-const Cards = ({ data, getRandomTaskData }) => {
+const Cards = ({ data, getRandomTaskData, TaskList }) => {
   console.log("data:", data);
   return (
     <div className="card-container">
@@ -31,14 +31,18 @@ const Cards = ({ data, getRandomTaskData }) => {
         >
           {data.Rarity__c}
         </div>
-        <button
-          className={`${
-            data.Rarity__c === "" ? `basic` : `card-btn ${data.Rarity__c}`
-          }`}
-          onClick={getRandomTaskData}
-        >
-          Next Card
-        </button>
+        {TaskList.length > 0 ? (
+          <button
+            className={`${
+              data.Rarity__c === "" ? `basic` : `card-btn ${data.Rarity__c}`
+            }`}
+            onClick={getRandomTaskData}
+          >
+            Next Card
+          </button>
+        ) : (
+          <button>Loading...</button>
+        )}
       </div>
     </div>
   );
