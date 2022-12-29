@@ -1,11 +1,14 @@
 import React from "react";
 import "../styles/Cards.css";
 
+
+
 const Cards = ({ data, getRandomTaskData, TaskList }) => {
   console.log("data:", data);
   return (
-    <div className="card-container">
+    <div id="expand" className="card-container">
       <div
+        
         className={`${
           data.Rarity__c === "" ? "basic" : `card ${data.Rarity__c}`
         }`}
